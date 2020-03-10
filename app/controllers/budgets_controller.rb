@@ -1,4 +1,5 @@
 class BudgetsController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create]
 
     def index
       @budgets = Budget.all
@@ -9,7 +10,7 @@ class BudgetsController < ApplicationController
     end
 
     def create
-      Budget.create(budget_params)
+      current_user.budgets.create(budget_params)
       redirect_to root_path
     end
 
