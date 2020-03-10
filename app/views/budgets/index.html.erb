@@ -1,1 +1,9 @@
-<h1>Welcome to my Budgetting App</h1>
+<div class="container-fluid">
+  <h1>Welcome to my Budgetting App</h1>
+
+  <% @budgets.each do |budget| %>
+    <%= budget.month %>
+    <%= budget.income %>
+    <%= budget.extra_income %>
+  <% end %>
+</div>

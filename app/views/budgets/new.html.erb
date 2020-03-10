@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <h1>Enter Your Budget Details</h1>
+
+  <%= simple_form_for @budget do |f| %>
+    <%= f.input :month %>
+    <%= f.input :income %>
+    <%= f.input :extra_income %>
+    <%= f.input :actual_personal_savings %>
+    <%= f.input :actual_tfsa %>
+    <%= f.input :actual_rrsp %>
+    <br />
+    <%= f.submit 'Add Budget', class: 'btn btn-primary' %>
+
+  <% end %>
+
+</div>
+
