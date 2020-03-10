@@ -1,13 +1,35 @@
-<div class="container-fluid">
+<div class="container">
+  <br />
   <h1>Enter Your Budget Details</h1>
 
   <%= simple_form_for @budget do |f| %>
-    <%= f.input :month %>
-    <%= f.input :income %>
-    <%= f.input :extra_income %>
-    <%= f.input :actual_personal_savings %>
-    <%= f.input :actual_tfsa %>
-    <%= f.input :actual_rrsp %>
+      <%= f.input :month %>
+      <%= f.input :income %>
+      <%= f.input :extra_income %>
+      <br />
+    
+      <h1>Actual/Budget</h1>
+      <p> Please add your info here this is a little message cause you people are stupid as hell </p>
+      <br >
+    
+
+    <div class="container">
+    <div class="row">
+
+      <%= f.input :actual_personal_savings,
+                  hint: "Add your monthly personal savings here" %>
+
+      <%= f.input :actual_tfsa %>
+      <%= f.input :actual_rrsp %>
+      <%= f.input :actual_car_payment %>
+      <%= f.input :actual_gas_transit %>
+      <%= f.input :actual_rent_mortgage %>
+      <%= f.input :actual_insurance %>
+      <%= f.input :actual_utilities %>
+      <%= f.input :actual_internet_cable %>
+    </div>
+
+    </div>
     <br />
     <%= f.submit 'Add Budget', class: 'btn btn-primary' %>
 
